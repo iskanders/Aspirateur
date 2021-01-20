@@ -10,4 +10,12 @@ import lombok.Setter;
 public class Case {
     private int x;
     private int y;
+
+    public boolean equals(Object obj) {
+        Case incomingCase = (Case)obj;
+        if(this.x==incomingCase.getX() && this.y==incomingCase.getY())
+            return true;
+        else
+            return false;
+    }
 }
