@@ -1,4 +1,4 @@
-package Model;
+package application.Exception;
 
 public class AspiratorException extends Exception {
     public AspiratorException(String message){
