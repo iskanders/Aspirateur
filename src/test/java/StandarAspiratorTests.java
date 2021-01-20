@@ -13,7 +13,8 @@ public class StandarAspiratorTests {
         Case initialposition = new Case(0,0);
         aspirator = new StandardAspirator(initialposition, Orientation.North);
         aspirator.move(instruction);
-        assertEquals(aspirator,new StandardAspirator(new Case(0,1),Orientation.North));
+        assertTrue(((StandardAspirator)aspirator).getCurrentOrientation().equals(Orientation.North)
+                    && ((StandardAspirator)aspirator).getCurrentPosition().equals(new Case(0,1)));
     }
 
     @Test
@@ -22,8 +23,8 @@ public class StandarAspiratorTests {
         Case initialposition = new Case(0,0);
         aspirator = new StandardAspirator(initialposition,Orientation.North);
         aspirator.move(instruction);
-        assertEquals(aspirator,new StandardAspirator(new Case(0,0),Orientation.West));
-    }
+        assertTrue(((StandardAspirator)aspirator).getCurrentOrientation().equals(Orientation.West)
+                && ((StandardAspirator)aspirator).getCurrentPosition().equals(new Case(0,0)));    }
 
     @Test
     public void TurnRightTest() throws AspiratorException {
@@ -31,6 +32,6 @@ public class StandarAspiratorTests {
         Case initialposition = new Case(0,0);
         aspirator = new StandardAspirator(initialposition,Orientation.North);
         aspirator.move(instruction);
-        assertEquals(aspirator,new StandardAspirator(new Case(0,1),Orientation.East));
-    }
+        assertTrue(((StandardAspirator)aspirator).getCurrentOrientation().equals(Orientation.East)
+                && ((StandardAspirator)aspirator).getCurrentPosition().equals(new Case(0,0)));    }
 }
