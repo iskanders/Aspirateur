@@ -13,5 +13,5 @@ public class Piece {
     private int length;
 
     // Le nombre de carrés sur l’axe x
-    private int wigth;
+    private int width;
 }
