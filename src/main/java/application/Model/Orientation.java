@@ -1,7 +1,6 @@
 package application.Model;
 
 import lombok.Getter;
-import lombok.Setter;
 
 @Getter
 public enum Orientation {

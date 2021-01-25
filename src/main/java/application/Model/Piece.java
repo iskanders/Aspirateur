@@ -9,9 +9,9 @@ import lombok.Setter;
 @Setter
 public class Piece {
 
-    // Le nombre de carrés sur l’axe y
+    // Number of units on the Y axis
     private int length;
 
-    // Le nombre de carrés sur l’axe x
+    // Number of units on the X axis
     private int width;
 }

@@ -4,6 +4,10 @@ import application.Exception.AspiratorException;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+/**
+* A standard aspirator that implements the
+* interface Aspirator
+* */
 @AllArgsConstructor
 @Getter
 public class StandardAspirator implements Aspirator {
@@ -11,6 +15,12 @@ public class StandardAspirator implements Aspirator {
     private Case currentPosition;
     private Orientation currentOrientation;
 
+    /**
+     * Move Aspirator with one instruction at a time.
+     *
+     * @param instruction instruction move
+     * @throws AspiratorException may throw an AspiratorException
+     * */
     @Override
     public void move(Instruction instruction) throws AspiratorException {
 
